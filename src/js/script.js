@@ -9,7 +9,7 @@ function atualizaRelogio() {
 
     // Pega a hora atual e separa em horas, minutos e segundos
     const agora = new Date();
-    const horas = agora.getHours() || 12;
+    const horas = agora.getHours();
     const minutos = agora.getMinutes();
     const segundos = agora.getSeconds();
 

@@ -4,6 +4,7 @@
 	/* FONTS */
 	--font-family: 'Fira Sans', sans-serif;
 	--font-size-big: 24px;
+	--shadow-size: 10px;
 
 	/* COLORS */
 	--color-hour: #ee6723;
@@ -48,25 +49,73 @@ body {
 }
 
 .linha-horas {
-	width: 24px;
 	top: 106px;
 	color: var(--color-hour);
-	text-shadow: 0 0 5px var(--color-hour);
+	text-shadow: 0 0 var(--shadow-size) var(--color-hour);
 	z-index: 1;
 }
 
 .linha-minutos {
-	width: 24px;
-	top: 52px;
+	top: 50px;
 	color: var(--color-minute);
-	text-shadow: 0 0 5px var(--color-minute);
+	text-shadow: 0 0 var(--shadow-size) var(--color-minute);
 	z-index: 2;
 }
 
 .linha-segundos {
-	width: 24px;
-	top: 25px;
+	top: 22px;
 	color: var(--color-second);
-	text-shadow: 0 0 5px var(--color-second);
+	text-shadow: 0 0 var(--shadow-size) var(--color-second);
 	z-index: 3;
+}
+
+@media screen and (max-width: 800px) {
+	:root {
+		/* FONTS */
+		--font-size-big: 18px;
+		--shadow-size: 8px;
+	}
+
+	#relogio {
+		width: 300px;
+		height: 300px;
+	}
+
+	.linha-horas {
+		top: 84px;
+	}
+
+	.linha-minutos {
+		top: 40px;
+	}
+
+	.linha-segundos {
+		top: 18px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		/* FONTS */
+		--font-size-big: 14px;
+		--shadow-size: 6px;
+	}
+
+	#relogio {
+		width: 230px;
+		height: 230px;
+		border: 3px solid var(--color-accent);
+	}
+
+	.linha-horas {
+		top: 64px;
+	}
+
+	.linha-minutos {
+		top: 30px;
+	}
+
+	.linha-segundos {
+		top: 13px;
+	}
 }
