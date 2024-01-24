@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+:root {
+	/* FONTS */
+	--font-family: 'Fira Sans', sans-serif;
+	--font-size-big: 24px;
+
+	/* COLORS */
+	--color-hour: #ee6723;
+	--color-minute: #0dcfda;
+	--color-second: #c8cf2d;
+	--color-background: #000;
+	--color-accent: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	font-size: var(--font-size-big);
+	font-family: var(--font-family);
+	color: var(--color-accent);
+	background-color: var(--color-background);
+}
+
+#relogio {
+	position: relative;
+	width: 380px;
+	height: 380px;
+	border: 5px solid var(--color-accent);
+	border-radius: 50%;
+}
+
+.linha-horas,
+.linha-minutos,
+.linha-segundos {
+	position: absolute;
+	transform-origin: 50% 100%;
+	left: calc(50% - 12px);
+}
+
+.linha-horas {
+	width: 24px;
+	top: 106px;
+	color: var(--color-hour);
+	text-shadow: 0 0 5px var(--color-hour);
+	z-index: 1;
+}
+
+.linha-minutos {
+	width: 24px;
+	top: 52px;
+	color: var(--color-minute);
+	text-shadow: 0 0 5px var(--color-minute);
+	z-index: 2;
+}
+
+.linha-segundos {
+	width: 24px;
+	top: 25px;
+	color: var(--color-second);
+	text-shadow: 0 0 5px var(--color-second);
+	z-index: 3;
+}
