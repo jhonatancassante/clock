@@ -52,6 +52,26 @@ function atualizaRelogio() {
     }
 }
 
+function criarPontos() {
+    const relogio = document.getElementById("relogio");
+
+    for (let i = 1; i <= 60; i++) {
+        let ponto = document.createElement("div");
+        ponto.classList.add("ponto");
+        let angulo = 6 * i;
+        let tamanho = 10;
+
+        if (i % 5 === 0) {
+            tamanho += 8;
+        }
+
+        ponto.setAttribute("style", `--i: ${angulo}deg; --j: ${tamanho}px;`);
+        relogio.appendChild(ponto);
+    }
+}
+
+criarPontos();
+
 // Atualiza o relógio a cada segundo
 setInterval(atualizaRelogio, 1000);
 
