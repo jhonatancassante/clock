@@ -52,7 +52,7 @@ body {
 	top: 106px;
 	color: var(--color-hour);
 	text-shadow: 0 0 var(--shadow-size) var(--color-hour);
-	z-index: 1;
+	z-index: 3;
 }
 
 .linha-minutos {
@@ -66,7 +66,7 @@ body {
 	top: 22px;
 	color: var(--color-second);
 	text-shadow: 0 0 var(--shadow-size) var(--color-second);
-	z-index: 3;
+	z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
