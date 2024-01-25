@@ -111,12 +111,12 @@ body {
 	}
 
 	.ponto {
-		top: 148px;
+		top: 144px;
 		width: 148px;
 	}
 
 	.ponto::after {
-		width: 12px;
+		width: calc(var(--j) * 0.8);
 	}
 
 	.linha-horas {
@@ -146,13 +146,13 @@ body {
 	}
 
 	.ponto {
-		top: 128px;
+		top: 125px;
 		width: 128px;
 		height: 2px;
 	}
 
 	.ponto::after {
-		width: 9px;
+		width: calc(var(--j) * 0.7);
 	}
 
 	.linha-horas {
